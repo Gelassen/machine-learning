@@ -1,0 +1,4 @@
+- 224x224 image constrain in majority of CNN networks (keep it quadratic, big enough vs processing speed tradeoff)
+- change in ratio almost always lead to bad results 
+- scalling and padding are valid options to transform images to the same resolution 
+- network model would require amount of nodes at least equal to the same amount of features, in case of CNN it also requires images in shape (height, width, channel) that would be stacked into a batch of items -- it means all of them should be the same dimension
