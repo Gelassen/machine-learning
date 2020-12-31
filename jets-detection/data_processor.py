@@ -92,9 +92,11 @@ class ImageDataset():
             # TODO resize to the smallest dimension in list or/and padding image to the median dimensions
             # convert to bytes, mat.shape is height, width, channel
             mat = self.__load_and_resize__(os.path.join(self.root, item + ".jpg"))
-            result.append(mat)
+            result.append(mat.reshape(-1))
+                    
+        result = np.asarray(result)
         
-        return np.asarray(result)
+        return result
         
         
         
